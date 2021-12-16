@@ -44,7 +44,7 @@ st.markdown(
 
 
 
-@st.cache
+#@st.cache
 def load_data():
     client = pymongo.MongoClient("mongodb+srv://killia:Mhajjar3@cluster0.w4eru.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
     db = client.mydatabase
