@@ -81,11 +81,16 @@ BAT = BAT.iloc[-1]
 #print(BAT)
 prix = x.prix
 prix = prix.iloc[-1]
+
 import plotly.offline as py
 import plotly.graph_objs as go
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=x.index, y=x['prix'], name='cours BAT'))
-fig.add_trace(go.Scatter(x=x.index, y=x['predict'].shift(-1), name='prediction IA'))
+fig.add_trace(go.Scatter(x=x.index, y=x['predict'], name='prediction IA'))
+fig.add_trace(go.Scatter(x=x.index, y=x['predictUpper'], name='prediction UpperBand IA'))
+fig.add_trace(go.Scatter(x=x.index, y=x['upperband'], name='UpperBand'))
+fig.add_trace(go.Scatter(x=x.index, y=x['predictLower'], name='prediction LowerBand IA'))
+fig.add_trace(go.Scatter(x=x.index, y=x['lowerband'], name='LowerBand'))
 fig.add_trace(go.Scatter(x=signale_achat.index, y=signale_achat.prix, mode='markers', name='achat'))
 fig.add_trace(go.Scatter(x=signale_vente.index, y=signale_vente.prix, mode='markers', name='vente'))
 fig.add_trace(go.Scatter(x=signale_stoploss.index, y=signale_stoploss.prix, mode='markers', name='stoploss'))
