@@ -48,7 +48,7 @@ st.markdown(
 def load_data():
     client = pymongo.MongoClient("mongodb+srv://killia:Mhajjar3@cluster0.w4eru.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
     db = client.mydatabase
-    col = db.customers
+    col = db.customersw
     data = pd.DataFrame(list(col.find()))
     data = data.drop(columns=["_id","created_time"])
     data = data.dropna()
