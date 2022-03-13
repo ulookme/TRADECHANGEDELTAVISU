@@ -123,7 +123,7 @@ def refresher(seconds):
             f.write(f'# {randint(0, 10000)}')
         time.sleep(seconds)
 
-refresher(4)
+refresher(10)
 #st.sidebar.title("Control Panel")
 #right_col = st.beta_columns(1)
 
