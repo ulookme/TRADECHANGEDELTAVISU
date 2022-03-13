@@ -36,10 +36,6 @@ st.title('Trade Change live')
 st.title("IA TRADING BINANCE DELTACHANGE")
 st.markdown(
     "*TRADECHANGEDELTA est une intelligence artificielle en cours de teste réel sur les cours du marché BAT token,* "
-    "*il est complètement autonome et effectue c'est prédiction du marché chaque seconde en haute fréquence* "
-    "*,mais cependant la stratégie qu'elle suit l'empêchée d'effectuer du trading à haute fréquence (les frais de Binance me feront perdre mes gains) :°* "
-    "* sur le graphique ci-dessous vous pouvez voir les cours du marché réel et les prédictions faite par l'IA* "
-    "* il calcule lui-même sont propres Stoploss pour son profit en cas de chute brutal du marché.* "
 )
 #st.sidebar.title("Control Panel")
 
