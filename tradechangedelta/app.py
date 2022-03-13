@@ -115,6 +115,12 @@ st.write("Pertes Stoploss",round(float(perte),3))
 st.write("Benefice",round(float(benefice),3))
 
 
+import streamlit as st
+from streamlit_autorefresh import st_autorefresh
+
+# update every 5 mins
+st_autorefresh(interval=1 * 60 * 1000, key="dataframerefresh")
+
 #def refresher(seconds):
     #while True:
         #mainDir = os.path.dirname(__file__)
