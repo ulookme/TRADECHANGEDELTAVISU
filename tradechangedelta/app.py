@@ -35,7 +35,7 @@ st.title('Trade Change live')
 
 st.title("IA TRADING BINANCE DELTACHANGE")
 st.markdown(
-    "*TRADECHANGEDELTA est une intelligence artificielle en cours de teste réel sur les cours du marché BAT token,* "
+    "*TRADECHANGEDELTA est une intelligence artificielle en cours de teste réel sur les cours du marché BAT* "
 )
 #st.sidebar.title("Control Panel")
 
