@@ -115,15 +115,15 @@ st.write("Pertes Stoploss",round(float(perte),3))
 st.write("Benefice",round(float(benefice),3))
 
 
-def refresher(seconds):
-    while True:
-        mainDir = os.path.dirname(__file__)
-        filePath = os.path.join(mainDir, 'app.py')
-        with open(filePath, 'w') as f:
-            f.write(f'# {randint(0, 10000)}')
-        time.sleep(seconds)
+#def refresher(seconds):
+    #while True:
+        #mainDir = os.path.dirname(__file__)
+        #filePath = os.path.join(mainDir, 'app.py')
+        #with open(filePath, 'w') as f:
+            #f.write(f'# {randint(0, 10000)}')
+        #time.sleep(seconds)
 
-refresher(20)
+#refresher(20)
 #st.sidebar.title("Control Panel")
 #right_col = st.beta_columns(1)
 
