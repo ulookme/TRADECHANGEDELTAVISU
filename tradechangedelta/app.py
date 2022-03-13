@@ -23,6 +23,9 @@ import plotly.express as px
 import plotly.figure_factory as ff
 import matplotlib.pyplot as plt
 import altair as alt
+from random import randint
+import time
+import os
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.title('Trade Change live')
@@ -111,6 +114,16 @@ st.write("Gain Rapporter par l'IA",round(float(gain),3))
 st.write("Pertes Stoploss",round(float(perte),3))
 st.write("Benefice",round(float(benefice),3))
 
+
+def refresher(seconds):
+    while True:
+        mainDir = os.path.dirname(__file__)
+        filePath = os.path.join(mainDir, 'dummy.py')
+        with open(filePath, 'w') as f:
+            f.write(f'# {randint(0, 10000)}')
+        time.sleep(seconds)
+
+refresher(1)
 #st.sidebar.title("Control Panel")
 #right_col = st.beta_columns(1)
 
