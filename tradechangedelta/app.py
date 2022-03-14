@@ -100,7 +100,7 @@ fig.update_layout(
 
 import plotly.express as px
 
-fig2 = px.density_heatmap(df, x=x.index, y=x['prix'])
+fig2 = px.density_heatmap(x, x=x.index, y=x['prix'])
 fig2.show()
 
 #fig.show()
