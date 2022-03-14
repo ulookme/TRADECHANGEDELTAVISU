@@ -103,7 +103,7 @@ import plotly.express as px
 fig3 = go.Figure(
     data= x,
     layout=go.Layout(
-        xaxis=.index,
+        xaxis=x.index,
         yaxis=x['prix'],
         title="MOVE",
         updatemenus=[dict(
