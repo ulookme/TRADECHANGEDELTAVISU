@@ -108,7 +108,7 @@ fig.update_layout(
 #fig.show()
 st.plotly_chart(fig)
 #st.plotly_chart(fig2)
-st.plotly_chart(fig3)
+#st.plotly_chart(fig3)
 #st.sidebar.title("Control Panel")
 st.write("USDT EN POSSESSION",round(float(USDT),3))
 st.write("TOTAL DES BAT EN DOLLARS EN COURS DE TRADE",round(float(BAT),3))
