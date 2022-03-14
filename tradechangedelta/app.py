@@ -99,6 +99,33 @@ fig.update_layout(
 
 
 
+
+c_bullet = go.Figure()
+
+c_bullet.add_trace(go.Indicator(
+    mode = "number+gauge+delta", 
+    value = int(x['prix'].tail(1)),
+    delta = {'reference': int(x['prix'].tail(2)[0])},
+    domain = {'x': [0.25, 1], 
+              'y': [0.08, 0.25]},
+    title = {'text':"<b>BAT DAY<br>RANGE</b><br><span style='color: gray; font-size:0.8em'>U.S. $</span>", 
+             'font': {"size": 14}},    
+    gauge = {
+        'shape': "bullet",
+        'axis': {'range': [None, 550]},
+        'threshold': {
+            'line': {'color': "Red", 'width': 2},
+            'thickness': 0.75,
+            'value': 505},
+        'steps': [
+            {'range': [0, 350], 'color': "gray"},
+            {'range': [350, 550], 'color': "lightgray"}],
+        'bar': {'color': 'black'}}))
+c_bullet.update_layout(height = 400 , margin = {'t':0, 'b':0, 'l':0})
+c_bullet.show()
+
+
+
 #fig.show()
 st.plotly_chart(fig)
 
