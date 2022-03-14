@@ -26,6 +26,8 @@ import altair as alt
 from random import randint
 import time
 import os
+import plotly.express as px
+import plotly.graph_objects as go
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.title('Trade Change live')
