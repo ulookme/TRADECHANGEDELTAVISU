@@ -100,8 +100,24 @@ fig.update_layout(
 
 import plotly.express as px
 
-fig3= px.scatter(x, x=x['predict'], y=x['prix'], animation_frame=x.index, animation_group=x.index,
-           log_x=True, size_max=55, range_x=[100,100], range_y=[25,90])
+fig3 = go.Figure(
+    data=[go.Scatter(x=[0, 1], y=[0, 1])],
+    layout=go.Layout(
+        xaxis=dict(range=[0, 5], autorange=False),
+        yaxis=dict(range=[0, 5], autorange=False),
+        title="MOVE",
+        updatemenus=[dict(
+            type="buttons",
+            buttons=[dict(label="Play",
+                          method="animate",
+                          args=[None])])]
+    ),
+    frames=[go.Frame(data=[go.Scatter(x=x.index, y=x['prix'])]),
+            go.Frame(data=[go.Scatter(x=x.index, y=x['predict'])]),
+            go.Frame(data=[go.Scatter(x=ignale_stoploss.index, y=signale_stoploss.prix)],
+                     layout=go.Layout(title_text="IA"))]
+)
+
 fig3.show()
 
 
