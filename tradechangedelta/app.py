@@ -98,27 +98,7 @@ fig.update_layout(
     title="<b> Live Trade IA </b>")
 
 
-import plotly.express as px
 
-fig3 = go.Figure(
-    data= x,
-    layout=go.Layout(
-        xaxis=x.index,
-        yaxis=x['prix'],
-        title="MOVE",
-        updatemenus=[dict(
-            type="buttons",
-            buttons=[dict(label="Play",
-                          method="animate",
-                          args=[None])])]
-    ),
-    frames=[go.Frame(data=[go.Scatter(x=x.index, y=x['prix'])]),
-            go.Frame(data=[go.Scatter(x=x.index, y=x['predict'])]),
-            go.Frame(data=[go.Scatter(x=ignale_stoploss.index, y=signale_stoploss.prix)],
-                     layout=go.Layout(title_text="IA"))]
-)
-
-fig3.show()
 
 
 
