@@ -100,12 +100,20 @@ fig.update_layout(
 
 import plotly.express as px
 
-fig2 = px.density_heatmap(x, x=x.index, y=x['prix'])
-fig2.show()
+fig3 = px.scatter(x, x=x.index, y=x['prix'], animation_frame="year", animation_group="country",
+           size="pop", color="continent", hover_name="country",
+           log_x=True, size_max=55, range_x=[100,100000], range_y=[25,90])
+fig3.show()
+
+
+
+#fig2 = px.density_heatmap(x, x=x.index, y=x['prix'])
+#fig2.show()
 
 #fig.show()
 st.plotly_chart(fig)
-st.plotly_chart(fig2)
+#st.plotly_chart(fig2)
+st.plotly_chart(fig3)
 #st.sidebar.title("Control Panel")
 st.write("USDT EN POSSESSION",round(float(USDT),3))
 st.write("TOTAL DES BAT EN DOLLARS EN COURS DE TRADE",round(float(BAT),3))
