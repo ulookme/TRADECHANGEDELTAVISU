@@ -98,7 +98,10 @@ fig.update_layout(
     title="<b> Live Trade IA </b>")
 
 
+import plotly.express as px
 
+fig = px.density_heatmap(df, x=x.index, y=x['prix'])
+fig.show()
 
 #fig.show()
 st.plotly_chart(fig)
