@@ -101,7 +101,7 @@ fig.update_layout(
 import plotly.express as px
 
 fig3 = go.Figure(
-    data=[go.Scatter(x=[0, 1], y=[0, 1])],
+    data= x,
     layout=go.Layout(
         xaxis=dict(range=[0, 5], autorange=False),
         yaxis=dict(range=[0, 5], autorange=False),
