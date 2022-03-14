@@ -101,7 +101,6 @@ fig.update_layout(
 import plotly.express as px
 
 fig3= px.scatter(x, x=x['predict'], y=x['prix'], animation_frame=x.index, animation_group=x.index,
-           size="pop", color="continent", hover_name="country",
            log_x=True, size_max=55, range_x=[100,100], range_y=[25,90])
 fig3.show()
 
