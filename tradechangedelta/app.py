@@ -100,12 +100,12 @@ fig.update_layout(
 
 import plotly.express as px
 
-fig = px.density_heatmap(df, x=x.index, y=x['prix'])
-fig.show()
+fig2 = px.density_heatmap(df, x=x.index, y=x['prix'])
+fig2.show()
 
 #fig.show()
 st.plotly_chart(fig)
-
+st.plotly_chart(fig2)
 #st.sidebar.title("Control Panel")
 st.write("USDT EN POSSESSION",round(float(USDT),3))
 st.write("TOTAL DES BAT EN DOLLARS EN COURS DE TRADE",round(float(BAT),3))
