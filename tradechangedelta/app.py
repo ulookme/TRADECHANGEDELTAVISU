@@ -98,16 +98,23 @@ fig.update_layout(
     title="<b> Live Trade IA </b>")
 
 
+import dash_bio
 
+
+
+
+fig2 = dash_bio.ManhattanPlot(
+    dataframe=x,
+)
 
 
 
 #fig2 = px.density_heatmap(x, x=x.index, y=x['prix'])
-#fig2.show()
+fig2.show()
 
 #fig.show()
 st.plotly_chart(fig)
-#st.plotly_chart(fig2)
+st.plotly_chart(fig2)
 #st.plotly_chart(fig3)
 #st.sidebar.title("Control Panel")
 st.write("USDT EN POSSESSION",round(float(USDT),3))
